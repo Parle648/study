@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style12.css">
     <title>events</title>
 </head>
 <body>
@@ -26,6 +26,40 @@
             до <input class="input" type="number" id="hight-cost" placeholder="250 000">₴
         </label>
     </div>
+
+    <form action="" class="form" name="form">
+        <h2 class="form-ttl">Регистрация</h2>
+
+        <input type="text" 
+            placeholder="Имя" 
+            value="" 
+            class="name"
+            data-reg="^[a-z ,.'-]+$">
+        <input type="text" 
+            placeholder="Фамилия" 
+            value="" 
+            class="surname" 
+            id="inline"
+            data-reg="^[a-z ,.'-]+$">
+        <input type="password" 
+               placeholder="Пароль" 
+               value="" 
+               class="password"
+               data-reg="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
+        <span></span>
+        <input type="password" 
+            placeholder="Повторите пароль" 
+            value=""
+            class="repead-passwd password"
+            data-reg="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
+        <span></span>
+        <input type="email" placeholder="email" value="" class="mail" data-reg="^[a-z0-9](\.?[a-z0-9]){1,}@g(oogle)?mail\.com$">
+        <span class="accept"><label><input type="checkbox" name="accept" id="" class="accept-input">
+                <div class="fake-checkbox"><img src="Vector.svg" alt="" class="check-mark"></div>
+            </label> Я принимаю <a href="@!" class="user-accept"> условия пользовательского </a> соглашения</span>
+
+        <button type="submit" class="submit-btn">Регистрация</button>
+    </form>
     
     <script src="index.js"></script>
 </body>

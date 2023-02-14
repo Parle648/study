@@ -105,3 +105,53 @@ hight.addEventListener('input', function(){
 
     sliderTargetTwo.style.left= percent  + 'px'
 })
+
+const subm = document.querySelector('.submit-btn'),
+    inputsArr = document.querySelectorAll('input');
+let isvalid = true  ;
+
+function suibmit(event) {
+    event.preventDefault();
+    for (input of inputs) {
+        if (input.value === '') {
+            input.classList.add('error');
+        };
+    };
+};
+
+inputsArr.forEach(function (input) {
+    input.addEventListener('input', function (event) {
+        if (event.target.hasAttribute('data-reg')) {
+            checkInput(event.target);
+        };
+    });
+});
+
+function checkInput(elem) {
+    const value = elem.value;
+    const reg = new RegExp(elem.getAttribute('data-reg'));
+    if (reg.test(value)) {
+        elem.classList.add('ok');
+        elem.classList.remove('error');
+    } else {
+        elem.classList.add('error');
+    };
+};
+
+subm.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.target.classList.add('ready')
+    inputsArr.forEach((e) => {
+        if (e.closest('.error')) {
+            isvalid = false;
+        };
+    });
+
+    if (isvalid) {
+        console.log(`${
+            inputsArr.forEach(function (e) {
+                console.log(e.value);
+            })
+        }`);
+    };
+});
