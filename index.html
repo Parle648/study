@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="style12.css">
     <title>events</title>
 </head>
+
 <body>
 
-    <div class="slider-wrapper"> 
+    <div class="slider-wrapper">
         <div class="slider-terget">
 
         </div>
@@ -30,37 +32,133 @@
     <form action="" class="form" name="form">
         <h2 class="form-ttl">Регистрация</h2>
 
-        <input type="text" 
-            placeholder="Имя" 
-            value="" 
-            class="name"
-            data-reg="^[a-z ,.'-]+$">
-        <input type="text" 
-            placeholder="Фамилия" 
-            value="" 
-            class="surname" 
-            id="inline"
-            data-reg="^[a-z ,.'-]+$">
-        <input type="password" 
-               placeholder="Пароль" 
-               value="" 
-               class="password"
-               data-reg="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
-        <span></span>
-        <input type="password" 
-            placeholder="Повторите пароль" 
-            value=""
-            class="repead-passwd password"
+        <input type="text" placeholder="Имя" value="" class="name" data-reg="^[a-z ,.'-]+$">
+        <input type="text" placeholder="Фамилия" value="" class="surname" id="inline" data-reg="^[a-z ,.'-]+$">
+        <input type="password" placeholder="Пароль" value="" class="password"
             data-reg="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
         <span></span>
-        <input type="email" placeholder="email" value="" class="mail" data-reg="^[a-z0-9](\.?[a-z0-9]){1,}@g(oogle)?mail\.com$">
+        <input type="password" placeholder="Повторите пароль" value="" class="repead-passwd password"
+            data-reg="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
+        <span></span>
+        <input type="email" placeholder="email" value="" class="mail"
+            data-reg="^[a-z0-9](\.?[a-z0-9]){1,}@g(oogle)?mail\.com$">
         <span class="accept"><label><input type="checkbox" name="accept" id="" class="accept-input">
                 <div class="fake-checkbox"><img src="Vector.svg" alt="" class="check-mark"></div>
             </label> Я принимаю <a href="@!" class="user-accept"> условия пользовательского </a> соглашения</span>
 
         <button type="submit" class="submit-btn">Регистрация</button>
     </form>
-    
+
+    <ul class="nav-wrapper">
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+        <li class="nav-elem">
+            hello
+        </li>
+    </ul>
+    <br><br><br><br><br><br>
+
+    <input type="file" name="file" id="" class="file">
+    <label for="file">
+        <div class="drop-area">
+        </div>
+    </label>
+
+    <div class="drop-down-menu">
+        <div class="drop-header">
+            variant 1
+        </div>
+        <div class="drop-body">
+            <span class="variant">variant2</span>
+            <span class="variant">variant3</span>
+            <span class="variant">variant4</span>
+            <span class="variant">variant5</span>
+        </div>
+    </div>
+
+
+    <div class="flex-btns">
+        <button class="flex__btn" id="higher">от большего к меньшему</button>
+        <button class="flex__btn" id="lower">от меньшего к большему</button>
+    </div>
+    <div class="flex-box">
+        <div class="prod-item">
+            <h2 class="prod__ttl">product one</р>
+            <h2 class="prod__cost">1500</h2>
+        </div>
+        <div class="prod-item">
+            <h2 class="prod__ttl">product two</р>
+            <h2 class="prod__cost">15300</h2>
+        </div>
+        <div class="prod-item">
+            <h2 class="prod__ttl">product three</р>
+            <h2 class="prod__cost">112500</h2>
+        </div>
+        <div class="prod-item">
+            <h2 class="prod__ttl">product four</р>
+            <h2 class="prod__cost">15900</h2>
+        </div>
+        <div class="prod-item">
+            <h2 class="prod__ttl">product five</р>
+            <h2 class="prod__cost">150</h2>
+        </div>
+    </div>
+
+    <div class="cost-sort">
+        <button class="up">по возрастанию</button>
+        <button class="down">по убыванию</button>
+
+        <div class="flex">
+            <div class="elem" data-cost="135">
+                cost = 135
+            </div>
+            <div class="elem" data-cost="1351">
+                cost = 1351
+            </div>
+            <div class="elem" data-cost="15">
+                cost = 15
+            </div>
+            <div class="elem" data-cost="35">
+                cost = 35
+            </div>
+            <div class="elem" data-cost="13">
+                cost = 13
+            </div>
+        </div>
+    </div> 
+
     <script src="index.js"></script>
 </body>
+
 </html>

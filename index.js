@@ -155,3 +155,91 @@ subm.addEventListener('click', function (event) {
         }`);
     };
 });
+
+// const dragArea = document.querySelector('.drop-area')
+
+// dragArea.addEventListener('drop', function(event){
+//     let files = [...event.dataTransfer.files]
+// })
+
+// ['dragenter', 'dragover'].forEach(function(one){
+//     dragArea.addEventListener(one, (event) => {
+//         dragArea.style.background = 'dark'
+//     })
+// })
+// ['drop', 'dragleave'].forEach(function(two){
+//     dragArea.addEventListener(two, (event) => {
+//         dragArea.style.background = '#fff'
+//     })
+// })
+// ['dragend', 'dragenter', 'dragleave', 'dragover'].forEach(function(dragEvent){
+//     document.addEventListener(dragEvent, (event) => {
+//         event.preventDefault()
+//         event.stopPropagation()
+//     })
+// })
+
+const dropHeader = document.querySelector('.drop-header'),
+      dropBody = document.querySelector('.drop-body'),
+      variant = document.querySelectorAll('.variant')
+
+
+dropHeader.onclick = function(){
+    dropBody.classList.toggle('body_active')
+}
+
+variant.forEach((choseVariant) => {
+    choseVariant.addEventListener('click', (event) => {
+        let chose = event.target.innerText
+        dropHeader.innerText = chose;
+        dropBody.classList.remove('body_active')
+    })
+})
+
+const higher = document.querySelector('#higher')
+const lower = document.querySelector('#lower')
+const carts = document.querySelectorAll('.prod-item')
+
+higher.addEventListener('click', (event) => {
+    let array = [];
+    function createArr(cart){
+        array.push(cart)
+    }
+    carts.forEach(createArr)
+    for(cart of carts){
+        
+    }
+})
+
+const block = document.querySelector('.flex')
+const btn = document.querySelector('.up')
+const btn2 = document.querySelector('.down')
+
+btn.onclick = sortUp;
+btn2.onclick = sortDown;
+
+function sortUp(){
+    const arr = [...block.children]
+    arr.sort((a, b) => {
+        console.log(a.dataset.cost)
+        return a.dataset.cost - b.dataset.cost
+    })
+    block.innerHTML = ''
+
+    for (let div of arr){
+        block.appendChild(div)
+    }
+}
+
+function sortDown(){
+    const arr = [...block.children]
+    arr.sort((a, b) => {
+        console.log(a.dataset.cost)
+        return b.dataset.cost - a.dataset.cost
+    })
+    block.innerHTML = ''
+
+    for (let div of arr){
+        block.appendChild(div)
+    }
+}
